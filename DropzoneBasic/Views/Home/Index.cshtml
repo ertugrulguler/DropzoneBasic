@@ -1,0 +1,41 @@
+﻿@model IEnumerable<DropzoneBasic.Models.Product>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+
+
+
+<ul>
+    @foreach (var item in Model)
+    {
+        <li>
+            @item.Name
+        </li>
+        <li>@item.ImagePath</li>
+    }
+</ul>
+
+
+@*<div class="jumbotron">
+    <form action="~/Home/Upload" class="dropzone" id="dropzoneJsForm" style="background-color:#00BFFF">
+    </form>
+    <button id="submit-all">
+        Submit All Files
+    </button>
+</div>
+
+
+<script type="text/javascript">
+    Dropzone.options.dropzoneForm =
+        {
+            init: function () {
+                this.on("complete", function (data) {
+                    //var res = eval('(' + data.xhr.responseText + ')');
+                    var res = JSON.parse(data.xhr.responseText);
+                });
+            }
+        };
+</script>*@  
